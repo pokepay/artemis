@@ -55,8 +55,7 @@ mutation customList($input: [Input!]!) {
 }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'Custom$_Mutation'),
       operationName: r'custom',
@@ -65,9 +64,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'Custom$_Mutation$_mut'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r's'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r's'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
@@ -95,11 +92,7 @@ final LibraryDefinition libraryDefinition =
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: true)
       ],
-      inputs: [
-        QueryInput(
-            type: TypeName(name: r'Input', isNonNull: true),
-            name: QueryInputName(name: r'input'))
-      ],
+      inputs: [QueryInput(type: TypeName(name: r'Input', isNonNull: true), name: QueryInputName(name: r'input'))],
       generateHelpers: true,
       suffix: r'Mutation'),
   QueryDefinition(
@@ -110,9 +103,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'CustomList$_Mutation$_mutList'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r's'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r's'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
@@ -142,9 +133,7 @@ final LibraryDefinition libraryDefinition =
       ],
       inputs: [
         QueryInput(
-            type: ListOfTypeName(
-                typeName: TypeName(name: r'Input', isNonNull: true),
-                isNonNull: true),
+            type: ListOfTypeName(typeName: TypeName(name: r'Input', isNonNull: true), isNonNull: true),
             name: QueryInputName(name: r'input'))
       ],
       generateHelpers: true,
@@ -170,6 +159,7 @@ class Custom$Mutation$Mut extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [s];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$Mutation$MutToJson(this);
 }
@@ -185,6 +175,7 @@ class Custom$Mutation extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [mut];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$MutationToJson(this);
 }
@@ -199,6 +190,7 @@ class Input extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [s];
+
   @override
   Map<String, dynamic> toJson() => _$InputToJson(this);
 }
@@ -214,6 +206,7 @@ class CustomList$Mutation$MutList extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [s];
+
   @override
   Map<String, dynamic> toJson() => _$CustomList$Mutation$MutListToJson(this);
 }
@@ -229,6 +222,7 @@ class CustomList$Mutation extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [mutList];
+
   @override
   Map<String, dynamic> toJson() => _$CustomList$MutationToJson(this);
 }
@@ -245,6 +239,7 @@ class CustomArguments extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [input];
+
   @override
   Map<String, dynamic> toJson() => _$CustomArgumentsToJson(this);
 }
@@ -305,6 +300,7 @@ class CustomMutation extends GraphQLQuery<Custom$Mutation, CustomArguments> {
 
   @override
   List<Object?> get props => [document, operationName, variables];
+
   @override
   Custom$Mutation parse(Map<String, dynamic> json) =>
       Custom$Mutation.fromJson(json);
@@ -322,6 +318,7 @@ class CustomListArguments extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [input];
+
   @override
   Map<String, dynamic> toJson() => _$CustomListArgumentsToJson(this);
 }
@@ -386,6 +383,7 @@ class CustomListMutation
 
   @override
   List<Object?> get props => [document, operationName, variables];
+
   @override
   CustomList$Mutation parse(Map<String, dynamic> json) =>
       CustomList$Mutation.fromJson(json);

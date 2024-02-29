@@ -34,8 +34,7 @@ void main() {
   });
 }
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'SomeQuery$_SomeObject'),
       operationName: r'some_query',
@@ -46,18 +45,10 @@ final LibraryDefinition libraryDefinition =
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
-        FragmentClassDefinition(
-            name: FragmentName(name: r'MyFragmentMixin'),
-            properties: [
-              ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r's'),
-                  isResolveType: false),
-              ClassProperty(
-                  type: DartTypeName(name: r'int'),
-                  name: ClassPropertyName(name: r'i'),
-                  isResolveType: false)
-            ])
+        FragmentClassDefinition(name: FragmentName(name: r'MyFragmentMixin'), properties: [
+          ClassProperty(type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r's'), isResolveType: false),
+          ClassProperty(type: DartTypeName(name: r'int'), name: ClassPropertyName(name: r'i'), isResolveType: false)
+        ])
       ],
       generateHelpers: false,
       suffix: r'Query')
@@ -85,6 +76,7 @@ class SomeQuery$SomeObject extends JsonSerializable
 
   @override
   List<Object?> get props => [s, i];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$SomeObjectToJson(this);
 }

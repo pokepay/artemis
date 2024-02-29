@@ -32,8 +32,7 @@ mutation custom($input: Input!) {
 }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'Custom$_Mutation'),
       operationName: r'custom',
@@ -42,9 +41,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'Custom$_Mutation'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'mut'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'mut'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
@@ -53,23 +50,14 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'Input'),
             properties: [
               ClassProperty(
-                  type: TypeName(name: r'Input'),
-                  name: ClassPropertyName(name: r'and'),
-                  isResolveType: false),
-              ClassProperty(
-                  type: TypeName(name: r'Input'),
-                  name: ClassPropertyName(name: r'or'),
-                  isResolveType: false)
+                  type: TypeName(name: r'Input'), name: ClassPropertyName(name: r'and'), isResolveType: false),
+              ClassProperty(type: TypeName(name: r'Input'), name: ClassPropertyName(name: r'or'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: true)
       ],
-      inputs: [
-        QueryInput(
-            type: TypeName(name: r'Input', isNonNull: true),
-            name: QueryInputName(name: r'input'))
-      ],
+      inputs: [QueryInput(type: TypeName(name: r'Input', isNonNull: true), name: QueryInputName(name: r'input'))],
       generateHelpers: false,
       suffix: r'Mutation')
 ]);
@@ -92,6 +80,7 @@ class Custom$Mutation extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [mut];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$MutationToJson(this);
 }
@@ -111,6 +100,7 @@ class Input extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [and, or];
+
   @override
   Map<String, dynamic> toJson() => _$InputToJson(this);
 }

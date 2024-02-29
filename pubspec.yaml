@@ -12,16 +12,16 @@ dependencies:
   code_builder: ^4.4.0
   build: ^2.3.1
   collection: ^1.17.1
-  dart_style: ^2.3.0
+  dart_style: ^2.3.5
   equatable: ^2.0.5
   glob: ^2.1.1
-  gql_code_builder: ^0.7.1
+  gql_code_builder: ^0.10.0
   gql_dedupe_link: ^2.0.3+1
-  gql_exec: ^0.4.3
-  gql_http_link: ^0.4.5
-  gql_link: ^0.5.1
-  gql: ^0.14.0
-  http: ^0.13.5
+  gql_exec: ^1.0.0
+  gql_http_link: ^1.0.0
+  gql_link: ^1.0.0
+  gql: ^1.0.0
+  http: ^1.2.1
   json_annotation: ^4.8.0
   path: ^1.8.3
   recase: ^4.1.0
@@ -36,4 +36,4 @@ dev_dependencies:
   build_resolvers: ^2.2.0
   test: ^1.22.2
   logging: ^1.1.1
-  lints: ^2.0.1
+  lints: ^3.0.0

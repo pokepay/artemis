@@ -44,15 +44,13 @@ const query = r'''
   }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'SomeQuery$_QueryResponse'),
       operationName: r'some_query',
       classes: [
         ClassDefinition(
-            name:
-                ClassName(name: r'SomeQuery$_QueryResponse$_deprecatedObject'),
+            name: ClassName(name: r'SomeQuery$_QueryResponse$_deprecatedObject'),
             properties: [
               ClassProperty(
                   type: DartTypeName(name: r'String'),
@@ -87,16 +85,13 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'SomeQuery$_QueryResponse'),
             properties: [
               ClassProperty(
-                  type: TypeName(
-                      name: r'SomeQuery$_QueryResponse$_deprecatedObject'),
+                  type: TypeName(name: r'SomeQuery$_QueryResponse$_deprecatedObject'),
                   name: ClassPropertyName(name: r'deprecatedObject'),
                   annotations: [r'''Deprecated('message')'''],
                   isResolveType: false),
               ClassProperty(
                   type: ListOfTypeName(
-                      typeName: TypeName(
-                          name: r'SomeQuery$_QueryResponse$_SomeObject'),
-                      isNonNull: false),
+                      typeName: TypeName(name: r'SomeQuery$_QueryResponse$_SomeObject'), isNonNull: false),
                   name: ClassPropertyName(name: r'someObjects'),
                   isResolveType: false)
             ],
@@ -131,6 +126,7 @@ class SomeQuery$QueryResponse$DeprecatedObject extends JsonSerializable
 
   @override
   List<Object?> get props => [someField, deprecatedField];
+
   @override
   Map<String, dynamic> toJson() =>
       _$SomeQuery$QueryResponse$DeprecatedObjectToJson(this);
@@ -152,6 +148,7 @@ class SomeQuery$QueryResponse$SomeObject extends JsonSerializable
 
   @override
   List<Object?> get props => [someField, deprecatedField];
+
   @override
   Map<String, dynamic> toJson() =>
       _$SomeQuery$QueryResponse$SomeObjectToJson(this);
@@ -171,6 +168,7 @@ class SomeQuery$QueryResponse extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [deprecatedObject, someObjects];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$QueryResponseToJson(this);
 }

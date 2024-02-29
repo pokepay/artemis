@@ -61,8 +61,7 @@ void main() {
 
 final String query = 'query some_query { i, f, s, b, id }';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'SomeQuery$_SomeObject'),
       operationName: r'some_query',
@@ -71,25 +70,15 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'SomeQuery$_SomeObject'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'int'),
-                  name: ClassPropertyName(name: r'i'),
-                  isResolveType: false),
+                  type: DartTypeName(name: r'int'), name: ClassPropertyName(name: r'i'), isResolveType: false),
               ClassProperty(
-                  type: DartTypeName(name: r'double'),
-                  name: ClassPropertyName(name: r'f'),
-                  isResolveType: false),
+                  type: DartTypeName(name: r'double'), name: ClassPropertyName(name: r'f'), isResolveType: false),
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r's'),
-                  isResolveType: false),
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r's'), isResolveType: false),
               ClassProperty(
-                  type: DartTypeName(name: r'bool'),
-                  name: ClassPropertyName(name: r'b'),
-                  isResolveType: false),
+                  type: DartTypeName(name: r'bool'), name: ClassPropertyName(name: r'b'), isResolveType: false),
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'id'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'id'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
@@ -125,6 +114,7 @@ class SomeQuery$SomeObject extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [i, f, s, b, id];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$SomeObjectToJson(this);
 }

@@ -48,8 +48,7 @@ const query = r'''
   }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'BrowseArticles$_Query'),
       operationName: r'BrowseArticles',
@@ -73,9 +72,7 @@ final LibraryDefinition libraryDefinition =
               ClassProperty(
                   type: TypeName(name: r'ArticleType', isNonNull: true),
                   name: ClassPropertyName(name: r'article_type'),
-                  annotations: [
-                    r'''JsonKey(name: 'article_type', unknownEnumValue: ArticleType.artemisUnknown)'''
-                  ],
+                  annotations: [r'''JsonKey(name: 'article_type', unknownEnumValue: ArticleType.artemisUnknown)'''],
                   isResolveType: false)
             ],
             factoryPossibilities: {},
@@ -86,10 +83,7 @@ final LibraryDefinition libraryDefinition =
             properties: [
               ClassProperty(
                   type: ListOfTypeName(
-                      typeName: TypeName(
-                          name: r'BrowseArticles$_Query$_Article',
-                          isNonNull: true),
-                      isNonNull: false),
+                      typeName: TypeName(name: r'BrowseArticles$_Query$_Article', isNonNull: true), isNonNull: false),
                   name: ClassPropertyName(name: r'articles'),
                   isResolveType: false)
             ],
@@ -99,13 +93,9 @@ final LibraryDefinition libraryDefinition =
       ],
       inputs: [
         QueryInput(
-            type: ListOfTypeName(
-                typeName: TypeName(name: r'ArticleType', isNonNull: true),
-                isNonNull: false),
+            type: ListOfTypeName(typeName: TypeName(name: r'ArticleType', isNonNull: true), isNonNull: false),
             name: QueryInputName(name: r'article_type_in'),
-            annotations: [
-              r'JsonKey(unknownEnumValue: ArticleType.artemisUnknown)'
-            ])
+            annotations: [r'JsonKey(unknownEnumValue: ArticleType.artemisUnknown)'])
       ],
       generateHelpers: true,
       suffix: r'Query')
@@ -136,6 +126,7 @@ class BrowseArticles$Query$Article extends JsonSerializable
 
   @override
   List<Object?> get props => [id, title, articleType];
+
   @override
   Map<String, dynamic> toJson() => _$BrowseArticles$Query$ArticleToJson(this);
 }
@@ -151,6 +142,7 @@ class BrowseArticles$Query extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [articles];
+
   @override
   Map<String, dynamic> toJson() => _$BrowseArticles$QueryToJson(this);
 }
@@ -177,6 +169,7 @@ class BrowseArticlesArguments extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [article_type_in];
+
   @override
   Map<String, dynamic> toJson() => _$BrowseArticlesArgumentsToJson(this);
 }
@@ -255,6 +248,7 @@ class BrowseArticlesQuery
 
   @override
   List<Object?> get props => [document, operationName, variables];
+
   @override
   BrowseArticles$Query parse(Map<String, dynamic> json) =>
       BrowseArticles$Query.fromJson(json);

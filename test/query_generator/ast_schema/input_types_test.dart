@@ -55,36 +55,29 @@ mutation createThing($createThingInput: CreateThingInput) {
 }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'CreateThing$_MutationRoot'),
       operationName: r'createThing',
       classes: [
         ClassDefinition(
-            name: ClassName(
-                name: r'CreateThing$_MutationRoot$_CreateThingResponse$_Thing'),
+            name: ClassName(name: r'CreateThing$_MutationRoot$_CreateThingResponse$_Thing'),
             properties: [
               ClassProperty(
                   type: DartTypeName(name: r'String', isNonNull: true),
                   name: ClassPropertyName(name: r'id'),
                   isResolveType: false),
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'message'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'message'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
         ClassDefinition(
-            name: ClassName(
-                name: r'CreateThing$_MutationRoot$_CreateThingResponse'),
+            name: ClassName(name: r'CreateThing$_MutationRoot$_CreateThingResponse'),
             properties: [
               ClassProperty(
-                  type: TypeName(
-                      name:
-                          r'CreateThing$_MutationRoot$_CreateThingResponse$_Thing'),
+                  type: TypeName(name: r'CreateThing$_MutationRoot$_CreateThingResponse$_Thing'),
                   name: ClassPropertyName(name: r'thing'),
                   isResolveType: false)
             ],
@@ -95,8 +88,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'CreateThing$_MutationRoot'),
             properties: [
               ClassProperty(
-                  type: TypeName(
-                      name: r'CreateThing$_MutationRoot$_CreateThingResponse'),
+                  type: TypeName(name: r'CreateThing$_MutationRoot$_CreateThingResponse'),
                   name: ClassPropertyName(name: r'createThing'),
                   isResolveType: false)
             ],
@@ -111,14 +103,10 @@ final LibraryDefinition libraryDefinition =
                   name: ClassPropertyName(name: r'clientId'),
                   isResolveType: false),
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'message'),
-                  isResolveType: false),
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'message'), isResolveType: false),
               ClassProperty(
-                  type: ListOfTypeName(
-                      typeName:
-                          TypeName(name: r'OtherObjectInput', isNonNull: true),
-                      isNonNull: false),
+                  type:
+                      ListOfTypeName(typeName: TypeName(name: r'OtherObjectInput', isNonNull: true), isNonNull: false),
                   name: ClassPropertyName(name: r'shares'),
                   isResolveType: false)
             ],
@@ -137,11 +125,7 @@ final LibraryDefinition libraryDefinition =
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: true)
       ],
-      inputs: [
-        QueryInput(
-            type: TypeName(name: r'CreateThingInput'),
-            name: QueryInputName(name: r'createThingInput'))
-      ],
+      inputs: [QueryInput(type: TypeName(name: r'CreateThingInput'), name: QueryInputName(name: r'createThingInput'))],
       generateHelpers: false,
       suffix: r'Mutation')
 ]);
@@ -168,6 +152,7 @@ class CreateThing$MutationRoot$CreateThingResponse$Thing
 
   @override
   List<Object?> get props => [id, message];
+
   @override
   Map<String, dynamic> toJson() =>
       _$CreateThing$MutationRoot$CreateThingResponse$ThingToJson(this);
@@ -186,6 +171,7 @@ class CreateThing$MutationRoot$CreateThingResponse extends JsonSerializable
 
   @override
   List<Object?> get props => [thing];
+
   @override
   Map<String, dynamic> toJson() =>
       _$CreateThing$MutationRoot$CreateThingResponseToJson(this);
@@ -202,6 +188,7 @@ class CreateThing$MutationRoot extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [createThing];
+
   @override
   Map<String, dynamic> toJson() => _$CreateThing$MutationRootToJson(this);
 }
@@ -225,6 +212,7 @@ class CreateThingInput extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [clientId, message, shares];
+
   @override
   Map<String, dynamic> toJson() => _$CreateThingInputToJson(this);
 }
@@ -240,6 +228,7 @@ class OtherObjectInput extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [id];
+
   @override
   Map<String, dynamic> toJson() => _$OtherObjectInputToJson(this);
 }

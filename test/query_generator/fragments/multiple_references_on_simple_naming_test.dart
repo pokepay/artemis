@@ -56,8 +56,7 @@ void main() {
   );
 }
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'SomeQuery$_QueryResponse'),
       operationName: r'some_query',
@@ -93,25 +92,15 @@ final LibraryDefinition libraryDefinition =
                   name: ClassPropertyName(name: r'someObject'),
                   isResolveType: false),
               ClassProperty(
-                  type: TypeName(name: r'MoreData'),
-                  name: ClassPropertyName(name: r'moreData'),
-                  isResolveType: false)
+                  type: TypeName(name: r'MoreData'), name: ClassPropertyName(name: r'moreData'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
-        FragmentClassDefinition(
-            name: FragmentName(name: r'MyFragmentMixin'),
-            properties: [
-              ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r's'),
-                  isResolveType: false),
-              ClassProperty(
-                  type: DartTypeName(name: r'int'),
-                  name: ClassPropertyName(name: r'i'),
-                  isResolveType: false)
-            ])
+        FragmentClassDefinition(name: FragmentName(name: r'MyFragmentMixin'), properties: [
+          ClassProperty(type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r's'), isResolveType: false),
+          ClassProperty(type: DartTypeName(name: r'int'), name: ClassPropertyName(name: r'i'), isResolveType: false)
+        ])
       ],
       generateHelpers: false,
       suffix: r'Query')
@@ -138,6 +127,7 @@ class SomeObject extends JsonSerializable with EquatableMixin, MyFragmentMixin {
 
   @override
   List<Object?> get props => [s, i];
+
   @override
   Map<String, dynamic> toJson() => _$SomeObjectToJson(this);
 }
@@ -153,6 +143,7 @@ class MoreData extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [someObject];
+
   @override
   Map<String, dynamic> toJson() => _$MoreDataToJson(this);
 }
@@ -170,6 +161,7 @@ class SomeQuery$QueryResponse extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [someObject, moreData];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$QueryResponseToJson(this);
 }

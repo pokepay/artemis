@@ -61,8 +61,7 @@ query QueData($intsNonNullable: [Int]!, $stringNullable: String) {
 }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'MutData$_Mutation'),
       operationName: r'MutData',
@@ -71,9 +70,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'MutData$_Mutation$_MutationResponse'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r's'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r's'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
@@ -101,11 +98,7 @@ final LibraryDefinition libraryDefinition =
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: true)
       ],
-      inputs: [
-        QueryInput(
-            type: TypeName(name: r'Input', isNonNull: true),
-            name: QueryInputName(name: r'input'))
-      ],
+      inputs: [QueryInput(type: TypeName(name: r'Input', isNonNull: true), name: QueryInputName(name: r'input'))],
       generateHelpers: true,
       suffix: r'Mutation'),
   QueryDefinition(
@@ -116,16 +109,11 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'QueData$_Query$_QueryResponse'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r's'),
-                  isResolveType: false),
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r's'), isResolveType: false),
               ClassProperty(
-                  type: DartTypeName(name: r'int'),
-                  name: ClassPropertyName(name: r'i'),
-                  isResolveType: false),
+                  type: DartTypeName(name: r'int'), name: ClassPropertyName(name: r'i'), isResolveType: false),
               ClassProperty(
-                  type: ListOfTypeName(
-                      typeName: DartTypeName(name: r'int'), isNonNull: true),
+                  type: ListOfTypeName(typeName: DartTypeName(name: r'int'), isNonNull: true),
                   name: ClassPropertyName(name: r'list'),
                   isResolveType: false)
             ],
@@ -146,12 +134,9 @@ final LibraryDefinition libraryDefinition =
       ],
       inputs: [
         QueryInput(
-            type: ListOfTypeName(
-                typeName: DartTypeName(name: r'int'), isNonNull: true),
+            type: ListOfTypeName(typeName: DartTypeName(name: r'int'), isNonNull: true),
             name: QueryInputName(name: r'intsNonNullable')),
-        QueryInput(
-            type: DartTypeName(name: r'String'),
-            name: QueryInputName(name: r'stringNullable'))
+        QueryInput(type: DartTypeName(name: r'String'), name: QueryInputName(name: r'stringNullable'))
       ],
       generateHelpers: true,
       suffix: r'Query')
@@ -178,6 +163,7 @@ class MutData$Mutation$MutationResponse extends JsonSerializable
 
   @override
   List<Object?> get props => [s];
+
   @override
   Map<String, dynamic> toJson() =>
       _$MutData$Mutation$MutationResponseToJson(this);
@@ -194,6 +180,7 @@ class MutData$Mutation extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [mut];
+
   @override
   Map<String, dynamic> toJson() => _$MutData$MutationToJson(this);
 }
@@ -208,6 +195,7 @@ class Input extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [s];
+
   @override
   Map<String, dynamic> toJson() => _$InputToJson(this);
 }
@@ -227,6 +215,7 @@ class QueData$Query$QueryResponse extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [s, i, list];
+
   @override
   Map<String, dynamic> toJson() => _$QueData$Query$QueryResponseToJson(this);
 }
@@ -242,6 +231,7 @@ class QueData$Query extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [que];
+
   @override
   Map<String, dynamic> toJson() => _$QueData$QueryToJson(this);
 }
@@ -258,6 +248,7 @@ class MutDataArguments extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [input];
+
   @override
   Map<String, dynamic> toJson() => _$MutDataArgumentsToJson(this);
 }
@@ -318,6 +309,7 @@ class MutDataMutation extends GraphQLQuery<MutData$Mutation, MutDataArguments> {
 
   @override
   List<Object?> get props => [document, operationName, variables];
+
   @override
   MutData$Mutation parse(Map<String, dynamic> json) =>
       MutData$Mutation.fromJson(json);
@@ -340,6 +332,7 @@ class QueDataArguments extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [intsNonNullable, stringNullable];
+
   @override
   Map<String, dynamic> toJson() => _$QueDataArgumentsToJson(this);
 }
@@ -435,6 +428,7 @@ class QueDataQuery extends GraphQLQuery<QueData$Query, QueDataArguments> {
 
   @override
   List<Object?> get props => [document, operationName, variables];
+
   @override
   QueData$Query parse(Map<String, dynamic> json) =>
       QueData$Query.fromJson(json);

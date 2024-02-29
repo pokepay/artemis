@@ -39,8 +39,7 @@ const query = r'''
   }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       document: parseString(query),
       name: QueryName(name: r'SomeQuery$_QueryResponse'),
@@ -105,6 +104,7 @@ class SomeQuery$QueryResponse extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [someValue];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$QueryResponseToJson(this);
 }

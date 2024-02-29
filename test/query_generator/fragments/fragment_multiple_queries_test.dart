@@ -89,8 +89,7 @@ const fragmentsString = '''
   }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'GetPokemon$_Query'),
       operationName: r'getPokemon',
@@ -112,24 +111,14 @@ final LibraryDefinition libraryDefinition =
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
-        FragmentClassDefinition(
-            name: FragmentName(name: r'PokemonFragmentMixin'),
-            properties: [
-              ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'number'),
-                  isResolveType: false),
-              ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'name'),
-                  isResolveType: false)
-            ])
+        FragmentClassDefinition(name: FragmentName(name: r'PokemonFragmentMixin'), properties: [
+          ClassProperty(
+              type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'number'), isResolveType: false),
+          ClassProperty(
+              type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'name'), isResolveType: false)
+        ])
       ],
-      inputs: [
-        QueryInput(
-            type: DartTypeName(name: r'String', isNonNull: true),
-            name: QueryInputName(name: r'name'))
-      ],
+      inputs: [QueryInput(type: DartTypeName(name: r'String', isNonNull: true), name: QueryInputName(name: r'name'))],
       generateHelpers: true,
       suffix: r'Query'),
   QueryDefinition(
@@ -146,34 +135,21 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'GetAllPokemons$_Query'),
             properties: [
               ClassProperty(
-                  type: ListOfTypeName(
-                      typeName:
-                          TypeName(name: r'GetAllPokemons$_Query$_Pokemon'),
-                      isNonNull: false),
+                  type: ListOfTypeName(typeName: TypeName(name: r'GetAllPokemons$_Query$_Pokemon'), isNonNull: false),
                   name: ClassPropertyName(name: r'pokemons'),
                   isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
-        FragmentClassDefinition(
-            name: FragmentName(name: r'PokemonFragmentMixin'),
-            properties: [
-              ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'number'),
-                  isResolveType: false),
-              ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'name'),
-                  isResolveType: false)
-            ])
+        FragmentClassDefinition(name: FragmentName(name: r'PokemonFragmentMixin'), properties: [
+          ClassProperty(
+              type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'number'), isResolveType: false),
+          ClassProperty(
+              type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'name'), isResolveType: false)
+        ])
       ],
-      inputs: [
-        QueryInput(
-            type: DartTypeName(name: r'int', isNonNull: true),
-            name: QueryInputName(name: r'first'))
-      ],
+      inputs: [QueryInput(type: DartTypeName(name: r'int', isNonNull: true), name: QueryInputName(name: r'first'))],
       generateHelpers: true,
       suffix: r'Query')
 ]);
@@ -201,6 +177,7 @@ class GetPokemon$Query$Pokemon extends JsonSerializable
 
   @override
   List<Object?> get props => [number, name];
+
   @override
   Map<String, dynamic> toJson() => _$GetPokemon$Query$PokemonToJson(this);
 }
@@ -216,6 +193,7 @@ class GetPokemon$Query extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [pokemon];
+
   @override
   Map<String, dynamic> toJson() => _$GetPokemon$QueryToJson(this);
 }
@@ -230,6 +208,7 @@ class GetAllPokemons$Query$Pokemon extends JsonSerializable
 
   @override
   List<Object?> get props => [number, name];
+
   @override
   Map<String, dynamic> toJson() => _$GetAllPokemons$Query$PokemonToJson(this);
 }
@@ -245,6 +224,7 @@ class GetAllPokemons$Query extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [pokemons];
+
   @override
   Map<String, dynamic> toJson() => _$GetAllPokemons$QueryToJson(this);
 }
@@ -261,6 +241,7 @@ class GetPokemonArguments extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [name];
+
   @override
   Map<String, dynamic> toJson() => _$GetPokemonArgumentsToJson(this);
 }
@@ -344,6 +325,7 @@ class GetPokemonQuery
 
   @override
   List<Object?> get props => [document, operationName, variables];
+
   @override
   GetPokemon$Query parse(Map<String, dynamic> json) =>
       GetPokemon$Query.fromJson(json);
@@ -361,6 +343,7 @@ class GetAllPokemonsArguments extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [first];
+
   @override
   Map<String, dynamic> toJson() => _$GetAllPokemonsArgumentsToJson(this);
 }
@@ -444,6 +427,7 @@ class GetAllPokemonsQuery
 
   @override
   List<Object?> get props => [document, operationName, variables];
+
   @override
   GetAllPokemons$Query parse(Map<String, dynamic> json) =>
       GetAllPokemons$Query.fromJson(json);

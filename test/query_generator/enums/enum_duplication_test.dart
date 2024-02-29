@@ -56,8 +56,7 @@ const anotherQuery = r'''
   }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'Custom$_Query'),
       operationName: r'custom',
@@ -73,9 +72,7 @@ final LibraryDefinition libraryDefinition =
               ClassProperty(
                   type: TypeName(name: r'MyEnum'),
                   name: ClassPropertyName(name: r'e'),
-                  annotations: [
-                    r'JsonKey(unknownEnumValue: MyEnum.artemisUnknown)'
-                  ],
+                  annotations: [r'JsonKey(unknownEnumValue: MyEnum.artemisUnknown)'],
                   isResolveType: false)
             ],
             factoryPossibilities: {},
@@ -85,9 +82,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'Custom$_Query'),
             properties: [
               ClassProperty(
-                  type: TypeName(name: r'Custom$_Query$_q'),
-                  name: ClassPropertyName(name: r'q'),
-                  isResolveType: false)
+                  type: TypeName(name: r'Custom$_Query$_q'), name: ClassPropertyName(name: r'q'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
@@ -110,9 +105,7 @@ final LibraryDefinition libraryDefinition =
               ClassProperty(
                   type: TypeName(name: r'MyEnum'),
                   name: ClassPropertyName(name: r'e'),
-                  annotations: [
-                    r'JsonKey(unknownEnumValue: MyEnum.artemisUnknown)'
-                  ],
+                  annotations: [r'JsonKey(unknownEnumValue: MyEnum.artemisUnknown)'],
                   isResolveType: false)
             ],
             factoryPossibilities: {},
@@ -122,9 +115,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'CustomList$_Query'),
             properties: [
               ClassProperty(
-                  type: ListOfTypeName(
-                      typeName: TypeName(name: r'CustomList$_Query$_qList'),
-                      isNonNull: false),
+                  type: ListOfTypeName(typeName: TypeName(name: r'CustomList$_Query$_qList'), isNonNull: false),
                   name: ClassPropertyName(name: r'qList'),
                   isResolveType: false)
             ],
@@ -155,6 +146,7 @@ class Custom$Query$Q extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [e];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$Query$QToJson(this);
 }
@@ -170,6 +162,7 @@ class Custom$Query extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [q];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryToJson(this);
 }
@@ -186,6 +179,7 @@ class CustomList$Query$QList extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [e];
+
   @override
   Map<String, dynamic> toJson() => _$CustomList$Query$QListToJson(this);
 }
@@ -201,6 +195,7 @@ class CustomList$Query extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [qList];
+
   @override
   Map<String, dynamic> toJson() => _$CustomList$QueryToJson(this);
 }

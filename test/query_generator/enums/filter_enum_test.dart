@@ -72,8 +72,7 @@ const query = r'''
   }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'Custom$_QueryRoot'),
       operationName: r'custom',
@@ -101,9 +100,7 @@ final LibraryDefinition libraryDefinition =
               ClassProperty(
                   type: TypeName(name: r'MyEnum'),
                   name: ClassPropertyName(name: r'e'),
-                  annotations: [
-                    r'JsonKey(unknownEnumValue: MyEnum.artemisUnknown)'
-                  ],
+                  annotations: [r'JsonKey(unknownEnumValue: MyEnum.artemisUnknown)'],
                   isResolveType: false)
             ],
             factoryPossibilities: {},
@@ -126,9 +123,7 @@ final LibraryDefinition libraryDefinition =
               ClassProperty(
                   type: TypeName(name: r'_InputInputEnum'),
                   name: ClassPropertyName(name: r'e'),
-                  annotations: [
-                    r'JsonKey(unknownEnumValue: $InputInputEnum.artemisUnknown)'
-                  ],
+                  annotations: [r'JsonKey(unknownEnumValue: $InputInputEnum.artemisUnknown)'],
                   isResolveType: false)
             ],
             factoryPossibilities: {},
@@ -139,12 +134,8 @@ final LibraryDefinition libraryDefinition =
         QueryInput(
             type: TypeName(name: r'input_enum', isNonNull: true),
             name: QueryInputName(name: r'e'),
-            annotations: [
-              r'JsonKey(unknownEnumValue: InputEnum.artemisUnknown)'
-            ]),
-        QueryInput(
-            type: TypeName(name: r'Input', isNonNull: true),
-            name: QueryInputName(name: r'i'))
+            annotations: [r'JsonKey(unknownEnumValue: InputEnum.artemisUnknown)']),
+        QueryInput(type: TypeName(name: r'Input', isNonNull: true), name: QueryInputName(name: r'i'))
       ],
       generateHelpers: false,
       suffix: r'Query')
@@ -170,6 +161,7 @@ class Custom$QueryRoot$QueryResponse extends JsonSerializable
 
   @override
   List<Object?> get props => [e];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRoot$QueryResponseToJson(this);
 }
@@ -185,6 +177,7 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [q];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRootToJson(this);
 }
@@ -200,6 +193,7 @@ class Input extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [e];
+
   @override
   Map<String, dynamic> toJson() => _$InputToJson(this);
 }

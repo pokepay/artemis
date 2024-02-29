@@ -73,8 +73,7 @@ final String graphQLSchema = '''
   }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'SomeQuery$_SomeObject'),
       operationName: r'some_query',
@@ -83,9 +82,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'SomeQuery$_SomeObject$_SomeUnion$_TypeA'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'int'),
-                  name: ClassPropertyName(name: r'a'),
-                  isResolveType: false),
+                  type: DartTypeName(name: r'int'), name: ClassPropertyName(name: r'a'), isResolveType: false),
               ClassProperty(
                   type: DartTypeName(name: r'String'),
                   name: ClassPropertyName(name: r'_'),
@@ -125,9 +122,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'SomeQuery$_SomeObject$_SomeUnion$_TypeB'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'int'),
-                  name: ClassPropertyName(name: r'b'),
-                  isResolveType: false),
+                  type: DartTypeName(name: r'int'), name: ClassPropertyName(name: r'b'), isResolveType: false),
               ClassProperty(
                   type: DartTypeName(name: r'String'),
                   name: ClassPropertyName(name: r'_'),
@@ -178,10 +173,8 @@ final LibraryDefinition libraryDefinition =
                   isResolveType: true)
             ],
             factoryPossibilities: {
-              r'TypeA':
-                  ClassName(name: r'SomeQuery$_SomeObject$_SomeUnion$_TypeA'),
-              r'TypeB':
-                  ClassName(name: r'SomeQuery$_SomeObject$_SomeUnion$_TypeB')
+              r'TypeA': ClassName(name: r'SomeQuery$_SomeObject$_SomeUnion$_TypeA'),
+              r'TypeB': ClassName(name: r'SomeQuery$_SomeObject$_SomeUnion$_TypeB')
             },
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
@@ -240,6 +233,7 @@ class SomeQuery$SomeObject$SomeUnion$TypeA
 
   @override
   List<Object?> get props => [a, $, $a, $aA, $aA_, $new, $$typename];
+
   @override
   Map<String, dynamic> toJson() =>
       _$SomeQuery$SomeObject$SomeUnion$TypeAToJson(this);
@@ -280,6 +274,7 @@ class SomeQuery$SomeObject$SomeUnion$TypeB
 
   @override
   List<Object?> get props => [b, $, $b, $bB, $bB_, kw$new, kw$IN, $$typename];
+
   @override
   Map<String, dynamic> toJson() =>
       _$SomeQuery$SomeObject$SomeUnion$TypeBToJson(this);
@@ -306,6 +301,7 @@ class SomeQuery$SomeObject$SomeUnion extends JsonSerializable
 
   @override
   List<Object?> get props => [$$typename];
+
   @override
   Map<String, dynamic> toJson() {
     switch ($$typename) {
@@ -330,6 +326,7 @@ class SomeQuery$SomeObject extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [o];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$SomeObjectToJson(this);
 }

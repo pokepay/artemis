@@ -52,8 +52,7 @@ void main() {
   });
 }
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'ClientEventsData$_Query'),
       operationName: r'ClientEventsData',
@@ -73,10 +72,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'ClientEventPage'),
             properties: [
               ClassProperty(
-                  type: ListOfTypeName(
-                      typeName:
-                          TypeName(name: r'ClientEventItem', isNonNull: true),
-                      isNonNull: true),
+                  type: ListOfTypeName(typeName: TypeName(name: r'ClientEventItem', isNonNull: true), isNonNull: true),
                   name: ClassPropertyName(name: r'items'),
                   isResolveType: false)
             ],
@@ -118,6 +114,7 @@ class ClientEventItem extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [type];
+
   @override
   Map<String, dynamic> toJson() => _$ClientEventItemToJson(this);
 }
@@ -133,6 +130,7 @@ class ClientEventPage extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [items];
+
   @override
   Map<String, dynamic> toJson() => _$ClientEventPageToJson(this);
 }
@@ -148,6 +146,7 @@ class ClientEventsData$Query extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [clientEvents];
+
   @override
   Map<String, dynamic> toJson() => _$ClientEventsData$QueryToJson(this);
 }
@@ -199,6 +198,7 @@ class ClientEventsDataQuery
 
   @override
   List<Object?> get props => [document, operationName];
+
   @override
   ClientEventsData$Query parse(Map<String, dynamic> json) =>
       ClientEventsData$Query.fromJson(json);

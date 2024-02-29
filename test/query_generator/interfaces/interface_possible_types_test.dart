@@ -66,8 +66,7 @@ const graphQLSchema = '''
   }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'Custom$_Query'),
       operationName: r'custom',
@@ -111,8 +110,7 @@ final LibraryDefinition libraryDefinition =
             ],
             factoryPossibilities: {
               r'User': ClassName(name: r'Custom$_Query$_Node$_User'),
-              r'ChatMessage':
-                  ClassName(name: r'Custom$_Query$_Node$_ChatMessage')
+              r'ChatMessage': ClassName(name: r'Custom$_Query$_Node$_ChatMessage')
             },
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
@@ -128,11 +126,7 @@ final LibraryDefinition libraryDefinition =
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false)
       ],
-      inputs: [
-        QueryInput(
-            type: DartTypeName(name: r'String', isNonNull: true),
-            name: QueryInputName(name: r'id'))
-      ],
+      inputs: [QueryInput(type: DartTypeName(name: r'String', isNonNull: true), name: QueryInputName(name: r'id'))],
       generateHelpers: false,
       suffix: r'Query')
 ]);
@@ -155,6 +149,7 @@ class Custom$Query$Node$User extends Custom$Query$Node with EquatableMixin {
 
   @override
   List<Object?> get props => [username];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$Query$Node$UserToJson(this);
 }
@@ -171,6 +166,7 @@ class Custom$Query$Node$ChatMessage extends Custom$Query$Node
 
   @override
   List<Object?> get props => [message];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$Query$Node$ChatMessageToJson(this);
 }
@@ -197,6 +193,7 @@ class Custom$Query$Node extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [id, $$typename];
+
   @override
   Map<String, dynamic> toJson() {
     switch ($$typename) {
@@ -221,6 +218,7 @@ class Custom$Query extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [nodeById];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryToJson(this);
 }

@@ -52,8 +52,7 @@ void main() {
   });
 }
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'SomeQuery$_QueryRoot'),
       operationName: r'some_query',
@@ -62,9 +61,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'SomeQuery$_QueryRoot$_SomeObject'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r's'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r's'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
@@ -84,9 +81,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'Input'),
             properties: [
               ClassProperty(
-                  type: TypeName(name: r'SubInput'),
-                  name: ClassPropertyName(name: r's'),
-                  isResolveType: false)
+                  type: TypeName(name: r'SubInput'), name: ClassPropertyName(name: r's'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
@@ -95,19 +90,13 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'SubInput'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r's'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r's'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: true)
       ],
-      inputs: [
-        QueryInput(
-            type: TypeName(name: r'Input', isNonNull: true),
-            name: QueryInputName(name: r'input'))
-      ],
+      inputs: [QueryInput(type: TypeName(name: r'Input', isNonNull: true), name: QueryInputName(name: r'input'))],
       generateHelpers: true,
       suffix: r'Query')
 ]);
@@ -132,6 +121,7 @@ class SomeQuery$QueryRoot$SomeObject extends JsonSerializable
 
   @override
   List<Object?> get props => [s];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$QueryRoot$SomeObjectToJson(this);
 }
@@ -147,6 +137,7 @@ class SomeQuery$QueryRoot extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [o];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$QueryRootToJson(this);
 }
@@ -161,6 +152,7 @@ class Input extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [s];
+
   @override
   Map<String, dynamic> toJson() => _$InputToJson(this);
 }
@@ -176,6 +168,7 @@ class SubInput extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [s];
+
   @override
   Map<String, dynamic> toJson() => _$SubInputToJson(this);
 }
@@ -192,6 +185,7 @@ class SomeQueryArguments extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [input];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQueryArgumentsToJson(this);
 }
@@ -253,6 +247,7 @@ class SomeQueryQuery
 
   @override
   List<Object?> get props => [document, operationName, variables];
+
   @override
   SomeQuery$QueryRoot parse(Map<String, dynamic> json) =>
       SomeQuery$QueryRoot.fromJson(json);

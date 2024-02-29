@@ -57,8 +57,7 @@ const query = r'''
   }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'Custom$_QueryRoot'),
       operationName: r'custom',
@@ -77,22 +76,16 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'Custom$_QueryRoot$_QueryResponse'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r's'),
-                  isResolveType: false),
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r's'), isResolveType: false),
               ClassProperty(
                   type: TypeName(name: r'MyEnum'),
                   name: ClassPropertyName(name: r'my'),
-                  annotations: [
-                    r'JsonKey(unknownEnumValue: MyEnum.artemisUnknown)'
-                  ],
+                  annotations: [r'JsonKey(unknownEnumValue: MyEnum.artemisUnknown)'],
                   isResolveType: false),
               ClassProperty(
                   type: TypeName(name: r'OtherEnum'),
                   name: ClassPropertyName(name: r'other'),
-                  annotations: [
-                    r'JsonKey(unknownEnumValue: OtherEnum.artemisUnknown)'
-                  ],
+                  annotations: [r'JsonKey(unknownEnumValue: OtherEnum.artemisUnknown)'],
                   isResolveType: false)
             ],
             factoryPossibilities: {},
@@ -115,9 +108,7 @@ final LibraryDefinition libraryDefinition =
               ClassProperty(
                   type: TypeName(name: r'MyEnum', isNonNull: true),
                   name: ClassPropertyName(name: r'e'),
-                  annotations: [
-                    r'JsonKey(unknownEnumValue: MyEnum.artemisUnknown)'
-                  ],
+                  annotations: [r'JsonKey(unknownEnumValue: MyEnum.artemisUnknown)'],
                   isResolveType: false)
             ],
             factoryPossibilities: {},
@@ -129,15 +120,11 @@ final LibraryDefinition libraryDefinition =
             type: DartTypeName(name: r'String', isNonNull: true),
             name: QueryInputName(name: r'_id'),
             annotations: [r'''JsonKey(name: '_id')''']),
-        QueryInput(
-            type: TypeName(name: r'Input', isNonNull: true),
-            name: QueryInputName(name: r'input')),
+        QueryInput(type: TypeName(name: r'Input', isNonNull: true), name: QueryInputName(name: r'input')),
         QueryInput(
             type: TypeName(name: r'OtherEnum', isNonNull: true),
             name: QueryInputName(name: r'o'),
-            annotations: [
-              r'JsonKey(unknownEnumValue: OtherEnum.artemisUnknown)'
-            ])
+            annotations: [r'JsonKey(unknownEnumValue: OtherEnum.artemisUnknown)'])
       ],
       generateHelpers: true,
       suffix: r'Query')
@@ -169,6 +156,7 @@ class Custom$QueryRoot$QueryResponse extends JsonSerializable
 
   @override
   List<Object?> get props => [s, my, other];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRoot$QueryResponseToJson(this);
 }
@@ -184,6 +172,7 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [q];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRootToJson(this);
 }
@@ -199,6 +188,7 @@ class Input extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [e];
+
   @override
   Map<String, dynamic> toJson() => _$InputToJson(this);
 }
@@ -243,6 +233,7 @@ class CustomArguments extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [$id, input, o];
+
   @override
   Map<String, dynamic> toJson() => _$CustomArgumentsToJson(this);
 }
@@ -343,6 +334,7 @@ class CustomQuery extends GraphQLQuery<Custom$QueryRoot, CustomArguments> {
 
   @override
   List<Object?> get props => [document, operationName, variables];
+
   @override
   Custom$QueryRoot parse(Map<String, dynamic> json) =>
       Custom$QueryRoot.fromJson(json);

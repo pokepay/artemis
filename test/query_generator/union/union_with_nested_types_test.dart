@@ -84,8 +84,7 @@ final String graphQLSchema = '''
   }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'CheckoutById$_QueryRoot'),
       operationName: r'checkoutById',
@@ -96,17 +95,14 @@ final LibraryDefinition libraryDefinition =
                     r'CheckoutById$_QueryRoot$_Node$_Checkout$_CheckoutLineItemConnection$_CheckoutLineItemEdge$_ImageConnection'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'id'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'id'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
         ClassDefinition(
             name: ClassName(
-                name:
-                    r'CheckoutById$_QueryRoot$_Node$_Checkout$_CheckoutLineItemConnection$_CheckoutLineItemEdge'),
+                name: r'CheckoutById$_QueryRoot$_Node$_Checkout$_CheckoutLineItemConnection$_CheckoutLineItemEdge'),
             properties: [
               ClassProperty(
                   type: ListOfTypeName(
@@ -121,9 +117,7 @@ final LibraryDefinition libraryDefinition =
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
         ClassDefinition(
-            name: ClassName(
-                name:
-                    r'CheckoutById$_QueryRoot$_Node$_Checkout$_CheckoutLineItemConnection'),
+            name: ClassName(name: r'CheckoutById$_QueryRoot$_Node$_Checkout$_CheckoutLineItemConnection'),
             properties: [
               ClassProperty(
                   type: DartTypeName(name: r'String', isNonNull: true),
@@ -151,9 +145,7 @@ final LibraryDefinition libraryDefinition =
                   isResolveType: false),
               ClassProperty(
                   type: TypeName(
-                      name:
-                          r'CheckoutById$_QueryRoot$_Node$_Checkout$_CheckoutLineItemConnection',
-                      isNonNull: true),
+                      name: r'CheckoutById$_QueryRoot$_Node$_Checkout$_CheckoutLineItemConnection', isNonNull: true),
                   name: ClassPropertyName(name: r'lineItems'),
                   isResolveType: false)
             ],
@@ -170,10 +162,7 @@ final LibraryDefinition libraryDefinition =
                   annotations: [r'''JsonKey(name: '__typename')'''],
                   isResolveType: true)
             ],
-            factoryPossibilities: {
-              r'Checkout':
-                  ClassName(name: r'CheckoutById$_QueryRoot$_Node$_Checkout')
-            },
+            factoryPossibilities: {r'Checkout': ClassName(name: r'CheckoutById$_QueryRoot$_Node$_Checkout')},
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
         ClassDefinition(
@@ -189,9 +178,7 @@ final LibraryDefinition libraryDefinition =
             isInput: false)
       ],
       inputs: [
-        QueryInput(
-            type: DartTypeName(name: r'String', isNonNull: true),
-            name: QueryInputName(name: r'checkoutId'))
+        QueryInput(type: DartTypeName(name: r'String', isNonNull: true), name: QueryInputName(name: r'checkoutId'))
       ],
       generateHelpers: false,
       suffix: r'Query')
@@ -218,6 +205,7 @@ class CheckoutById$QueryRoot$Node$Checkout$CheckoutLineItemConnection$CheckoutLi
 
   @override
   List<Object?> get props => [id];
+
   @override
   Map<String, dynamic> toJson() =>
       _$CheckoutById$QueryRoot$Node$Checkout$CheckoutLineItemConnection$CheckoutLineItemEdge$ImageConnectionToJson(
@@ -239,6 +227,7 @@ class CheckoutById$QueryRoot$Node$Checkout$CheckoutLineItemConnection$CheckoutLi
 
   @override
   List<Object?> get props => [edges];
+
   @override
   Map<String, dynamic> toJson() =>
       _$CheckoutById$QueryRoot$Node$Checkout$CheckoutLineItemConnection$CheckoutLineItemEdgeToJson(
@@ -263,6 +252,7 @@ class CheckoutById$QueryRoot$Node$Checkout$CheckoutLineItemConnection
 
   @override
   List<Object?> get props => [id, edges];
+
   @override
   Map<String, dynamic> toJson() =>
       _$CheckoutById$QueryRoot$Node$Checkout$CheckoutLineItemConnectionToJson(
@@ -285,6 +275,7 @@ class CheckoutById$QueryRoot$Node$Checkout extends CheckoutById$QueryRoot$Node
 
   @override
   List<Object?> get props => [id, lineItems];
+
   @override
   Map<String, dynamic> toJson() =>
       _$CheckoutById$QueryRoot$Node$CheckoutToJson(this);
@@ -308,6 +299,7 @@ class CheckoutById$QueryRoot$Node extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [$$typename];
+
   @override
   Map<String, dynamic> toJson() {
     switch ($$typename) {
@@ -330,6 +322,7 @@ class CheckoutById$QueryRoot extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [node];
+
   @override
   Map<String, dynamic> toJson() => _$CheckoutById$QueryRootToJson(this);
 }

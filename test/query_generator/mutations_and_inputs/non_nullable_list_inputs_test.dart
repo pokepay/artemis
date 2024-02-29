@@ -24,8 +24,7 @@ void main() {
           s: String
         }
       ''',
-            libraryDefinition:
-                LibraryDefinition(basename: r'query.graphql', queries: [
+            libraryDefinition: LibraryDefinition(basename: r'query.graphql', queries: [
               QueryDefinition(
                   name: QueryName(name: r'SomeQuery$_Query'),
                   operationName: r'some_query',
@@ -45,8 +44,7 @@ void main() {
                         name: ClassName(name: r'SomeQuery$_Query'),
                         properties: [
                           ClassProperty(
-                              type: TypeName(
-                                  name: r'SomeQuery$_Query$_SomeObject'),
+                              type: TypeName(name: r'SomeQuery$_Query$_SomeObject'),
                               name: ClassPropertyName(name: r'someQuery'),
                               isResolveType: false)
                         ],
@@ -55,47 +53,29 @@ void main() {
                         isInput: false)
                   ],
                   inputs: [
+                    QueryInput(type: DartTypeName(name: r'int'), name: QueryInputName(name: r'i')),
+                    QueryInput(type: DartTypeName(name: r'int', isNonNull: true), name: QueryInputName(name: r'inn')),
                     QueryInput(
-                        type: DartTypeName(name: r'int'),
-                        name: QueryInputName(name: r'i')),
-                    QueryInput(
-                        type: DartTypeName(name: r'int', isNonNull: true),
-                        name: QueryInputName(name: r'inn')),
-                    QueryInput(
-                        type: ListOfTypeName(
-                            typeName: DartTypeName(name: r'int'),
-                            isNonNull: false),
+                        type: ListOfTypeName(typeName: DartTypeName(name: r'int'), isNonNull: false),
                         name: QueryInputName(name: r'li')),
                     QueryInput(
-                        type: ListOfTypeName(
-                            typeName:
-                                DartTypeName(name: r'int', isNonNull: true),
-                            isNonNull: false),
+                        type: ListOfTypeName(typeName: DartTypeName(name: r'int', isNonNull: true), isNonNull: false),
                         name: QueryInputName(name: r'linn')),
                     QueryInput(
-                        type: ListOfTypeName(
-                            typeName: DartTypeName(name: r'int'),
-                            isNonNull: true),
+                        type: ListOfTypeName(typeName: DartTypeName(name: r'int'), isNonNull: true),
                         name: QueryInputName(name: r'lnni')),
                     QueryInput(
-                        type: ListOfTypeName(
-                            typeName:
-                                DartTypeName(name: r'int', isNonNull: true),
-                            isNonNull: true),
+                        type: ListOfTypeName(typeName: DartTypeName(name: r'int', isNonNull: true), isNonNull: true),
                         name: QueryInputName(name: r'lnninn')),
                     QueryInput(
                         type: ListOfTypeName(
-                            typeName: ListOfTypeName(
-                                typeName: DartTypeName(name: r'int'),
-                                isNonNull: false),
+                            typeName: ListOfTypeName(typeName: DartTypeName(name: r'int'), isNonNull: false),
                             isNonNull: false),
                         name: QueryInputName(name: r'matrix')),
                     QueryInput(
                         type: ListOfTypeName(
-                            typeName: ListOfTypeName(
-                                typeName:
-                                    DartTypeName(name: r'int', isNonNull: true),
-                                isNonNull: true),
+                            typeName:
+                                ListOfTypeName(typeName: DartTypeName(name: r'int', isNonNull: true), isNonNull: true),
                             isNonNull: true),
                         name: QueryInputName(name: r'matrixnn'))
                   ],
@@ -121,6 +101,7 @@ class SomeQuery$Query$SomeObject extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [s];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$Query$SomeObjectToJson(this);
 }
@@ -136,6 +117,7 @@ class SomeQuery$Query extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [someQuery];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$QueryToJson(this);
 }
@@ -175,6 +157,7 @@ class SomeQueryArguments extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [i, inn, li, linn, lnni, lnninn, matrix, matrixnn];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQueryArgumentsToJson(this);
 }
@@ -350,6 +333,7 @@ class SomeQueryQuery extends GraphQLQuery<SomeQuery$Query, SomeQueryArguments> {
 
   @override
   List<Object?> get props => [document, operationName, variables];
+
   @override
   SomeQuery$Query parse(Map<String, dynamic> json) =>
       SomeQuery$Query.fromJson(json);

@@ -57,8 +57,7 @@ mutation custom($input: Input!, $previousId: MyUuid, $listIds: [MyUuid]) {
 }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'Custom$_MutationRoot'),
       operationName: r'custom',
@@ -67,9 +66,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'Custom$_MutationRoot$_MutationResponse'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r's'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r's'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
@@ -78,8 +75,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'Custom$_MutationRoot'),
             properties: [
               ClassProperty(
-                  type:
-                      TypeName(name: r'Custom$_MutationRoot$_MutationResponse'),
+                  type: TypeName(name: r'Custom$_MutationRoot$_MutationResponse'),
                   name: ClassPropertyName(name: r'mut'),
                   isResolveType: false)
             ],
@@ -109,18 +105,12 @@ final LibraryDefinition libraryDefinition =
             isInput: true)
       ],
       inputs: [
+        QueryInput(type: TypeName(name: r'Input', isNonNull: true), name: QueryInputName(name: r'input')),
+        QueryInput(type: DartTypeName(name: r'MyUuid'), name: QueryInputName(name: r'previousId'), annotations: [
+          r'JsonKey(fromJson: fromGraphQLMyUuidNullableToDartMyUuidNullable, toJson: fromDartMyUuidNullableToGraphQLMyUuidNullable)'
+        ]),
         QueryInput(
-            type: TypeName(name: r'Input', isNonNull: true),
-            name: QueryInputName(name: r'input')),
-        QueryInput(
-            type: DartTypeName(name: r'MyUuid'),
-            name: QueryInputName(name: r'previousId'),
-            annotations: [
-              r'JsonKey(fromJson: fromGraphQLMyUuidNullableToDartMyUuidNullable, toJson: fromDartMyUuidNullableToGraphQLMyUuidNullable)'
-            ]),
-        QueryInput(
-            type: ListOfTypeName(
-                typeName: DartTypeName(name: r'MyUuid'), isNonNull: false),
+            type: ListOfTypeName(typeName: DartTypeName(name: r'MyUuid'), isNonNull: false),
             name: QueryInputName(name: r'listIds'),
             annotations: [
               r'JsonKey(fromJson: fromGraphQLListNullableMyUuidNullableToDartListNullableMyUuidNullable, toJson: fromDartListNullableMyUuidNullableToGraphQLListNullableMyUuidNullable)'
@@ -156,6 +146,7 @@ class Custom$MutationRoot$MutationResponse extends JsonSerializable
 
   @override
   List<Object?> get props => [s];
+
   @override
   Map<String, dynamic> toJson() =>
       _$Custom$MutationRoot$MutationResponseToJson(this);
@@ -172,6 +163,7 @@ class Custom$MutationRoot extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [mut];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$MutationRootToJson(this);
 }
@@ -197,6 +189,7 @@ class Input extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [id, idNullabe];
+
   @override
   Map<String, dynamic> toJson() => _$InputToJson(this);
 }
@@ -229,6 +222,7 @@ class CustomArguments extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [input, previousId, listIds];
+
   @override
   Map<String, dynamic> toJson() => _$CustomArgumentsToJson(this);
 }
@@ -319,6 +313,7 @@ class CustomMutation
 
   @override
   List<Object?> get props => [document, operationName, variables];
+
   @override
   Custom$MutationRoot parse(Map<String, dynamic> json) =>
       Custom$MutationRoot.fromJson(json);

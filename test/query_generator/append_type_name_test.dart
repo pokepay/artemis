@@ -30,8 +30,7 @@ void main() {
               e: String
             }
             ''',
-            libraryDefinition:
-                LibraryDefinition(basename: r'query.graphql', queries: [
+            libraryDefinition: LibraryDefinition(basename: r'query.graphql', queries: [
               QueryDefinition(
                   name: QueryName(name: r'Custom$_QueryRoot'),
                   operationName: r'custom',
@@ -93,6 +92,7 @@ class Custom$QueryRoot$Q extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [e, $$typename];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRoot$QToJson(this);
 }
@@ -111,6 +111,7 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [q, $$typename];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRootToJson(this);
 }
@@ -144,8 +145,7 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
               e: String
             }
             ''',
-            libraryDefinition:
-                LibraryDefinition(basename: r'query.graphql', queries: [
+            libraryDefinition: LibraryDefinition(basename: r'query.graphql', queries: [
               QueryDefinition(
                   name: QueryName(name: r'Custom$_QueryRoot'),
                   operationName: r'custom',
@@ -207,6 +207,7 @@ class Custom$QueryRoot$Q extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [e, $$typename];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRoot$QToJson(this);
 }
@@ -225,6 +226,7 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [q, $$typename];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRootToJson(this);
 }
@@ -260,8 +262,7 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
               e: String
             }
             ''',
-            libraryDefinition:
-                LibraryDefinition(basename: r'query.graphql', queries: [
+            libraryDefinition: LibraryDefinition(basename: r'query.graphql', queries: [
               QueryDefinition(
                   name: QueryName(name: r'Custom$_QueryRoot'),
                   operationName: r'custom',
@@ -295,19 +296,17 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
                         factoryPossibilities: {},
                         typeNameField: ClassPropertyName(name: r'__typename'),
                         isInput: false),
-                    FragmentClassDefinition(
-                        name: FragmentName(name: r'QueryResponseMixin'),
-                        properties: [
-                          ClassProperty(
-                              type: DartTypeName(name: r'String'),
-                              name: ClassPropertyName(name: r'e'),
-                              isResolveType: false),
-                          ClassProperty(
-                              type: TypeName(name: r'String'),
-                              name: ClassPropertyName(name: r'__typename'),
-                              annotations: [r'''JsonKey(name: '__typename')'''],
-                              isResolveType: true)
-                        ])
+                    FragmentClassDefinition(name: FragmentName(name: r'QueryResponseMixin'), properties: [
+                      ClassProperty(
+                          type: DartTypeName(name: r'String'),
+                          name: ClassPropertyName(name: r'e'),
+                          isResolveType: false),
+                      ClassProperty(
+                          type: TypeName(name: r'String'),
+                          name: ClassPropertyName(name: r'__typename'),
+                          annotations: [r'''JsonKey(name: '__typename')'''],
+                          isResolveType: true)
+                    ])
                   ],
                   generateHelpers: false,
                   suffix: r'Query')
@@ -338,6 +337,7 @@ class Custom$QueryRoot$Q extends JsonSerializable
 
   @override
   List<Object?> get props => [e, $$typename];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRoot$QToJson(this);
 }
@@ -356,6 +356,7 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [q, $$typename];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRootToJson(this);
 }
@@ -398,8 +399,7 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
               b: Int
             }
             ''',
-            libraryDefinition:
-                LibraryDefinition(basename: r'query.graphql', queries: [
+            libraryDefinition: LibraryDefinition(basename: r'query.graphql', queries: [
               QueryDefinition(
                   name: QueryName(name: r'Custom$_QueryRoot'),
                   operationName: r'custom',
@@ -448,10 +448,8 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
                               isResolveType: true)
                         ],
                         factoryPossibilities: {
-                          r'TypeA':
-                              ClassName(name: r'Custom$_QueryRoot$_q$_TypeA'),
-                          r'TypeB':
-                              ClassName(name: r'Custom$_QueryRoot$_q$_TypeB')
+                          r'TypeA': ClassName(name: r'Custom$_QueryRoot$_q$_TypeA'),
+                          r'TypeB': ClassName(name: r'Custom$_QueryRoot$_q$_TypeB')
                         },
                         typeNameField: ClassPropertyName(name: r'__typename'),
                         isInput: false),
@@ -497,6 +495,7 @@ class Custom$QueryRoot$Q$TypeA extends Custom$QueryRoot$Q with EquatableMixin {
 
   @override
   List<Object?> get props => [a, $$typename];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRoot$Q$TypeAToJson(this);
 }
@@ -516,6 +515,7 @@ class Custom$QueryRoot$Q$TypeB extends Custom$QueryRoot$Q with EquatableMixin {
 
   @override
   List<Object?> get props => [b, $$typename];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRoot$Q$TypeBToJson(this);
 }
@@ -540,6 +540,7 @@ class Custom$QueryRoot$Q extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [$$typename];
+
   @override
   Map<String, dynamic> toJson() {
     switch ($$typename) {
@@ -567,6 +568,7 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [q, $$typename];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRootToJson(this);
 }
@@ -597,8 +599,7 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
             e: String
           }
         ''',
-        libraryDefinition:
-            LibraryDefinition(basename: r'query.graphql', queries: [
+        libraryDefinition: LibraryDefinition(basename: r'query.graphql', queries: [
           QueryDefinition(
               name: QueryName(name: r'Custom$_QueryRoot'),
               operationName: r'custom',
@@ -620,8 +621,7 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
                     name: ClassName(name: r'Custom$_QueryRoot'),
                     properties: [
                       ClassProperty(
-                          type: TypeName(
-                              name: r'Custom$_QueryRoot$_QueryResponse'),
+                          type: TypeName(name: r'Custom$_QueryRoot$_QueryResponse'),
                           name: ClassPropertyName(name: r'q'),
                           isResolveType: false),
                       ClassProperty(
@@ -633,19 +633,15 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
                     factoryPossibilities: {},
                     typeNameField: ClassPropertyName(name: r'__typename'),
                     isInput: false),
-                FragmentClassDefinition(
-                    name: FragmentName(name: r'QueryResponseMixin'),
-                    properties: [
-                      ClassProperty(
-                          type: DartTypeName(name: r'String'),
-                          name: ClassPropertyName(name: r'e'),
-                          isResolveType: false),
-                      ClassProperty(
-                          type: TypeName(name: r'String'),
-                          name: ClassPropertyName(name: r'__typename'),
-                          annotations: [r'''JsonKey(name: '__typename')'''],
-                          isResolveType: true)
-                    ])
+                FragmentClassDefinition(name: FragmentName(name: r'QueryResponseMixin'), properties: [
+                  ClassProperty(
+                      type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'e'), isResolveType: false),
+                  ClassProperty(
+                      type: TypeName(name: r'String'),
+                      name: ClassPropertyName(name: r'__typename'),
+                      annotations: [r'''JsonKey(name: '__typename')'''],
+                      isResolveType: true)
+                ])
               ],
               generateHelpers: true,
               suffix: r'Query')
@@ -677,6 +673,7 @@ class Custom$QueryRoot$QueryResponse extends JsonSerializable
 
   @override
   List<Object?> get props => [e, $$typename];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRoot$QueryResponseToJson(this);
 }
@@ -695,6 +692,7 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [q, $$typename];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRootToJson(this);
 }
@@ -773,6 +771,7 @@ class CustomQuery extends GraphQLQuery<Custom$QueryRoot, JsonSerializable> {
 
   @override
   List<Object?> get props => [document, operationName];
+
   @override
   Custom$QueryRoot parse(Map<String, dynamic> json) =>
       Custom$QueryRoot.fromJson(json);

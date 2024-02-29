@@ -69,8 +69,7 @@ final String graphQLSchema = r'''
   }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'Custom$_Query'),
       operationName: r'custom',
@@ -96,9 +95,7 @@ final LibraryDefinition libraryDefinition =
                   name: ClassPropertyName(name: r'message'),
                   isResolveType: false),
               ClassProperty(
-                  type: TypeName(
-                      name: r'Custom$_Query$_Node$_ChatMessage$_User',
-                      isNonNull: true),
+                  type: TypeName(name: r'Custom$_Query$_Node$_ChatMessage$_User', isNonNull: true),
                   name: ClassPropertyName(name: r'user'),
                   isResolveType: false)
             ],
@@ -121,8 +118,7 @@ final LibraryDefinition libraryDefinition =
             ],
             factoryPossibilities: {
               r'User': ClassName(name: r'Custom$_Query$_Node$_User'),
-              r'ChatMessage':
-                  ClassName(name: r'Custom$_Query$_Node$_ChatMessage')
+              r'ChatMessage': ClassName(name: r'Custom$_Query$_Node$_ChatMessage')
             },
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
@@ -137,24 +133,18 @@ final LibraryDefinition libraryDefinition =
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
-        FragmentClassDefinition(
-            name: FragmentName(name: r'UserFragMixin'),
-            properties: [
-              ClassProperty(
-                  type: DartTypeName(name: r'String', isNonNull: true),
-                  name: ClassPropertyName(name: r'id'),
-                  isResolveType: false),
-              ClassProperty(
-                  type: DartTypeName(name: r'String', isNonNull: true),
-                  name: ClassPropertyName(name: r'username'),
-                  isResolveType: false)
-            ])
+        FragmentClassDefinition(name: FragmentName(name: r'UserFragMixin'), properties: [
+          ClassProperty(
+              type: DartTypeName(name: r'String', isNonNull: true),
+              name: ClassPropertyName(name: r'id'),
+              isResolveType: false),
+          ClassProperty(
+              type: DartTypeName(name: r'String', isNonNull: true),
+              name: ClassPropertyName(name: r'username'),
+              isResolveType: false)
+        ])
       ],
-      inputs: [
-        QueryInput(
-            type: DartTypeName(name: r'String', isNonNull: true),
-            name: QueryInputName(name: r'id'))
-      ],
+      inputs: [QueryInput(type: DartTypeName(name: r'String', isNonNull: true), name: QueryInputName(name: r'id'))],
       generateHelpers: false,
       suffix: r'Query')
 ]);
@@ -181,6 +171,7 @@ class Custom$Query$Node$User extends Custom$Query$Node
 
   @override
   List<Object?> get props => [id, username];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$Query$Node$UserToJson(this);
 }
@@ -196,6 +187,7 @@ class Custom$Query$Node$ChatMessage$User extends JsonSerializable
 
   @override
   List<Object?> get props => [id, username];
+
   @override
   Map<String, dynamic> toJson() =>
       _$Custom$Query$Node$ChatMessage$UserToJson(this);
@@ -215,6 +207,7 @@ class Custom$Query$Node$ChatMessage extends Custom$Query$Node
 
   @override
   List<Object?> get props => [message, user];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$Query$Node$ChatMessageToJson(this);
 }
@@ -241,6 +234,7 @@ class Custom$Query$Node extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [id, $$typename];
+
   @override
   Map<String, dynamic> toJson() {
     switch ($$typename) {
@@ -265,6 +259,7 @@ class Custom$Query extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [nodeById];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryToJson(this);
 }

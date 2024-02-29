@@ -77,8 +77,7 @@ const query = r'''
   }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'NewUserSub$_Subscription'),
       operationName: r'NewUserSub',
@@ -104,9 +103,7 @@ final LibraryDefinition libraryDefinition =
               ClassProperty(
                   type: TypeName(name: r'UserType', isNonNull: true),
                   name: ClassPropertyName(name: r'userType'),
-                  annotations: [
-                    r'JsonKey(unknownEnumValue: UserType.artemisUnknown)'
-                  ],
+                  annotations: [r'JsonKey(unknownEnumValue: UserType.artemisUnknown)'],
                   isResolveType: false)
             ],
             factoryPossibilities: {},
@@ -116,8 +113,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'NewUserSub$_Subscription'),
             properties: [
               ClassProperty(
-                  type: TypeName(
-                      name: r'NewUserSub$_Subscription$_User', isNonNull: true),
+                  type: TypeName(name: r'NewUserSub$_Subscription$_User', isNonNull: true),
                   name: ClassPropertyName(name: r'newUser'),
                   isResolveType: false)
             ],
@@ -153,6 +149,7 @@ class NewUserSub$Subscription$User extends JsonSerializable
 
   @override
   List<Object?> get props => [firstName, lastName, userType];
+
   @override
   Map<String, dynamic> toJson() => _$NewUserSub$Subscription$UserToJson(this);
 }
@@ -168,6 +165,7 @@ class NewUserSub$Subscription extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [newUser];
+
   @override
   Map<String, dynamic> toJson() => _$NewUserSub$SubscriptionToJson(this);
 }

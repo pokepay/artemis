@@ -109,8 +109,7 @@ void main() {
   });
 }
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'Query$_SomeObject'),
       operationName: r'query',
@@ -119,9 +118,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'Query$_SomeObject'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'a'),
-                  isResolveType: false),
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'a'), isResolveType: false),
               ClassProperty(
                   type: DartTypeName(name: r'Map<String, dynamic>'),
                   name: ClassPropertyName(name: r'b'),
@@ -135,8 +132,7 @@ final LibraryDefinition libraryDefinition =
       suffix: r'Query')
 ]);
 
-final LibraryDefinition libraryDefinitionWithCustomParserFns =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinitionWithCustomParserFns = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'Query$_SomeObject'),
       operationName: r'query',
@@ -162,8 +158,7 @@ final LibraryDefinition libraryDefinitionWithCustomParserFns =
   r'package:example/src/custom_parser.dart'
 ]);
 
-final LibraryDefinition libraryDefinitionWithCustomImports =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinitionWithCustomImports = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'Query$_SomeObject'),
       operationName: r'query',
@@ -186,35 +181,28 @@ final LibraryDefinition libraryDefinitionWithCustomImports =
                   ],
                   isResolveType: false),
               ClassProperty(
-                  type: ListOfTypeName(
-                      typeName: DartTypeName(name: r'MyUuid', isNonNull: true),
-                      isNonNull: true),
+                  type: ListOfTypeName(typeName: DartTypeName(name: r'MyUuid', isNonNull: true), isNonNull: true),
                   name: ClassPropertyName(name: r'c'),
                   annotations: [
                     r'JsonKey(fromJson: fromGraphQLListMyUuidToDartListMyUuid, toJson: fromDartListMyUuidToGraphQLListMyUuid)'
                   ],
                   isResolveType: false),
               ClassProperty(
-                  type: ListOfTypeName(
-                      typeName: DartTypeName(name: r'MyUuid'),
-                      isNonNull: false),
+                  type: ListOfTypeName(typeName: DartTypeName(name: r'MyUuid'), isNonNull: false),
                   name: ClassPropertyName(name: r'd'),
                   annotations: [
                     r'JsonKey(fromJson: fromGraphQLListNullableMyUuidNullableToDartListNullableMyUuidNullable, toJson: fromDartListNullableMyUuidNullableToGraphQLListNullableMyUuidNullable)'
                   ],
                   isResolveType: false),
               ClassProperty(
-                  type: ListOfTypeName(
-                      typeName: DartTypeName(name: r'MyUuid'), isNonNull: true),
+                  type: ListOfTypeName(typeName: DartTypeName(name: r'MyUuid'), isNonNull: true),
                   name: ClassPropertyName(name: r'e'),
                   annotations: [
                     r'JsonKey(fromJson: fromGraphQLListMyUuidNullableToDartListMyUuidNullable, toJson: fromDartListMyUuidNullableToGraphQLListMyUuidNullable)'
                   ],
                   isResolveType: false),
               ClassProperty(
-                  type: ListOfTypeName(
-                      typeName: DartTypeName(name: r'MyUuid', isNonNull: true),
-                      isNonNull: false),
+                  type: ListOfTypeName(typeName: DartTypeName(name: r'MyUuid', isNonNull: true), isNonNull: false),
                   name: ClassPropertyName(name: r'f'),
                   annotations: [
                     r'JsonKey(fromJson: fromGraphQLListNullableMyUuidToDartListNullableMyUuid, toJson: fromDartListNullableMyUuidToGraphQLListNullableMyUuid)'
@@ -252,13 +240,13 @@ class Query$SomeObject extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [a, b];
+
   @override
   Map<String, dynamic> toJson() => _$Query$SomeObjectToJson(this);
 }
 ''';
 
-const generatedFileWithCustomParserFns =
-    r'''// GENERATED CODE - DO NOT MODIFY BY HAND
+const generatedFileWithCustomParserFns = r'''// GENERATED CODE - DO NOT MODIFY BY HAND
 
 import 'package:json_annotation/json_annotation.dart';
 import 'package:equatable/equatable.dart';
@@ -280,13 +268,13 @@ class Query$SomeObject extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [a];
+
   @override
   Map<String, dynamic> toJson() => _$Query$SomeObjectToJson(this);
 }
 ''';
 
-const generatedFileWithCustomImports =
-    r'''// GENERATED CODE - DO NOT MODIFY BY HAND
+const generatedFileWithCustomImports = r'''// GENERATED CODE - DO NOT MODIFY BY HAND
 
 import 'package:json_annotation/json_annotation.dart';
 import 'package:equatable/equatable.dart';
@@ -336,6 +324,7 @@ class Query$SomeObject extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [a, b, c, d, e, f];
+
   @override
   Map<String, dynamic> toJson() => _$Query$SomeObjectToJson(this);
 }

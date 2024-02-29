@@ -48,8 +48,7 @@ void main() {
   });
 }
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'SomeQuery$_QueryRoot'),
       operationName: r'some_query',
@@ -63,9 +62,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'SomeQuery$_QueryRoot$_SomeObject'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r's'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r's'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
@@ -91,21 +88,15 @@ final LibraryDefinition libraryDefinition =
               ClassProperty(
                   type: TypeName(name: r'MyEnum'),
                   name: ClassPropertyName(name: r'e'),
-                  annotations: [
-                    r'JsonKey(unknownEnumValue: MyEnum.artemisUnknown)'
-                  ],
+                  annotations: [r'JsonKey(unknownEnumValue: MyEnum.artemisUnknown)'],
                   isResolveType: false),
               ClassProperty(
-                  type: ListOfTypeName(
-                      typeName: DartTypeName(name: r'String'),
-                      isNonNull: false),
+                  type: ListOfTypeName(typeName: DartTypeName(name: r'String'), isNonNull: false),
                   name: ClassPropertyName(name: r'ls'),
                   isResolveType: false),
               ClassProperty(
                   type: ListOfTypeName(
-                      typeName: ListOfTypeName(
-                          typeName: DartTypeName(name: r'int'),
-                          isNonNull: false),
+                      typeName: ListOfTypeName(typeName: DartTypeName(name: r'int'), isNonNull: false),
                       isNonNull: false),
                   name: ClassPropertyName(name: r'i'),
                   isResolveType: false)
@@ -115,9 +106,7 @@ final LibraryDefinition libraryDefinition =
             isInput: true)
       ],
       inputs: [
-        QueryInput(
-            type: TypeName(name: r'ComplexInput', isNonNull: true),
-            name: QueryInputName(name: r'filter'))
+        QueryInput(type: TypeName(name: r'ComplexInput', isNonNull: true), name: QueryInputName(name: r'filter'))
       ],
       generateHelpers: true,
       suffix: r'Query')
@@ -143,6 +132,7 @@ class SomeQuery$QueryRoot$SomeObject extends JsonSerializable
 
   @override
   List<Object?> get props => [s];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$QueryRoot$SomeObjectToJson(this);
 }
@@ -158,6 +148,7 @@ class SomeQuery$QueryRoot extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [o];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$QueryRootToJson(this);
 }
@@ -185,6 +176,7 @@ class ComplexInput extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [s, e, ls, i];
+
   @override
   Map<String, dynamic> toJson() => _$ComplexInputToJson(this);
 }
@@ -210,6 +202,7 @@ class SomeQueryArguments extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [filter];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQueryArgumentsToJson(this);
 }
@@ -271,6 +264,7 @@ class SomeQueryQuery
 
   @override
   List<Object?> get props => [document, operationName, variables];
+
   @override
   SomeQuery$QueryRoot parse(Map<String, dynamic> json) =>
       SomeQuery$QueryRoot.fromJson(json);

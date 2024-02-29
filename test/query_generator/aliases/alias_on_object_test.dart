@@ -44,8 +44,7 @@ const query = r'''
   }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'SomeQuery$_QueryResponse'),
       operationName: r'some_query',
@@ -54,9 +53,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'SomeQuery$_QueryResponse$_SomeObject'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'st'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'st'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
@@ -65,9 +62,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'SomeQuery$_QueryResponse$_anotherObject'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'str'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'str'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
@@ -76,18 +71,14 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'SomeQuery$_QueryResponse'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r's'),
-                  isResolveType: false),
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r's'), isResolveType: false),
               ClassProperty(
                   type: TypeName(name: r'SomeQuery$_QueryResponse$_SomeObject'),
                   name: ClassPropertyName(name: r'o'),
                   isResolveType: false),
               ClassProperty(
                   type: ListOfTypeName(
-                      typeName: TypeName(
-                          name: r'SomeQuery$_QueryResponse$_anotherObject'),
-                      isNonNull: false),
+                      typeName: TypeName(name: r'SomeQuery$_QueryResponse$_anotherObject'), isNonNull: false),
                   name: ClassPropertyName(name: r'anotherObject'),
                   isResolveType: false)
             ],
@@ -119,6 +110,7 @@ class SomeQuery$QueryResponse$SomeObject extends JsonSerializable
 
   @override
   List<Object?> get props => [st];
+
   @override
   Map<String, dynamic> toJson() =>
       _$SomeQuery$QueryResponse$SomeObjectToJson(this);
@@ -137,6 +129,7 @@ class SomeQuery$QueryResponse$AnotherObject extends JsonSerializable
 
   @override
   List<Object?> get props => [str];
+
   @override
   Map<String, dynamic> toJson() =>
       _$SomeQuery$QueryResponse$AnotherObjectToJson(this);
@@ -157,6 +150,7 @@ class SomeQuery$QueryResponse extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [s, o, anotherObject];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$QueryResponseToJson(this);
 }

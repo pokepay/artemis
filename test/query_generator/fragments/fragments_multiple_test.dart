@@ -95,30 +95,25 @@ void main() {
   });
 }
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'VoyagesData$_Query'),
       operationName: r'VoyagesData',
       classes: [
         ClassDefinition(
-            name: ClassName(
-                name: r'VoyagesData$_Query$_voyages$_voyages$_voyage$_arrival'),
+            name: ClassName(name: r'VoyagesData$_Query$_voyages$_voyages$_voyage$_arrival'),
             mixins: [FragmentName(name: r'DstMixin')],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
         ClassDefinition(
-            name: ClassName(
-                name:
-                    r'VoyagesData$_Query$_voyages$_voyages$_voyage$_departure'),
+            name: ClassName(name: r'VoyagesData$_Query$_voyages$_voyages$_voyage$_departure'),
             mixins: [FragmentName(name: r'DepartureMixin')],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
         ClassDefinition(
-            name: ClassName(
-                name: r'VoyagesData$_Query$_voyages$_voyages$_voyage'),
+            name: ClassName(name: r'VoyagesData$_Query$_voyages$_voyages$_voyage'),
             properties: [
               ClassProperty(
                   type: DartTypeName(name: r'DateTime', isNonNull: true),
@@ -129,25 +124,17 @@ final LibraryDefinition libraryDefinition =
                   name: ClassPropertyName(name: r'dateTo'),
                   isResolveType: false),
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'id'),
-                  isResolveType: false),
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'id'), isResolveType: false),
               ClassProperty(
                   type: DartTypeName(name: r'String', isNonNull: true),
                   name: ClassPropertyName(name: r'voyageNumber'),
                   isResolveType: false),
               ClassProperty(
-                  type: TypeName(
-                      name:
-                          r'VoyagesData$_Query$_voyages$_voyages$_voyage$_arrival',
-                      isNonNull: true),
+                  type: TypeName(name: r'VoyagesData$_Query$_voyages$_voyages$_voyage$_arrival', isNonNull: true),
                   name: ClassPropertyName(name: r'arrival'),
                   isResolveType: false),
               ClassProperty(
-                  type: TypeName(
-                      name:
-                          r'VoyagesData$_Query$_voyages$_voyages$_voyage$_departure',
-                      isNonNull: true),
+                  type: TypeName(name: r'VoyagesData$_Query$_voyages$_voyages$_voyage$_departure', isNonNull: true),
                   name: ClassPropertyName(name: r'departure'),
                   isResolveType: false)
             ],
@@ -162,9 +149,7 @@ final LibraryDefinition libraryDefinition =
                   name: ClassPropertyName(name: r'numberOfReports'),
                   isResolveType: false),
               ClassProperty(
-                  type: TypeName(
-                      name: r'VoyagesData$_Query$_voyages$_voyages$_voyage',
-                      isNonNull: true),
+                  type: TypeName(name: r'VoyagesData$_Query$_voyages$_voyages$_voyage', isNonNull: true),
                   name: ClassPropertyName(name: r'voyage'),
                   isResolveType: false)
             ],
@@ -176,9 +161,7 @@ final LibraryDefinition libraryDefinition =
             properties: [
               ClassProperty(
                   type: ListOfTypeName(
-                      typeName: TypeName(
-                          name: r'VoyagesData$_Query$_voyages$_voyages',
-                          isNonNull: true),
+                      typeName: TypeName(name: r'VoyagesData$_Query$_voyages$_voyages', isNonNull: true),
                       isNonNull: true),
                   name: ClassPropertyName(name: r'voyages'),
                   isResolveType: false)
@@ -190,34 +173,29 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'VoyagesData$_Query'),
             properties: [
               ClassProperty(
-                  type: TypeName(
-                      name: r'VoyagesData$_Query$_voyages', isNonNull: true),
+                  type: TypeName(name: r'VoyagesData$_Query$_voyages', isNonNull: true),
                   name: ClassPropertyName(name: r'voyages'),
                   isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: false),
-        FragmentClassDefinition(
-            name: FragmentName(name: r'DstMixin'),
-            properties: [
-              ClassProperty(
-                  type: DartTypeName(name: r'String', isNonNull: true),
-                  name: ClassPropertyName(name: r'id'),
-                  isResolveType: false),
-              ClassProperty(
-                  type: DartTypeName(name: r'String', isNonNull: true),
-                  name: ClassPropertyName(name: r'name'),
-                  isResolveType: false)
-            ]),
-        FragmentClassDefinition(
-            name: FragmentName(name: r'DepartureMixin'),
-            properties: [
-              ClassProperty(
-                  type: DartTypeName(name: r'String', isNonNull: true),
-                  name: ClassPropertyName(name: r'id'),
-                  isResolveType: false)
-            ]),
+        FragmentClassDefinition(name: FragmentName(name: r'DstMixin'), properties: [
+          ClassProperty(
+              type: DartTypeName(name: r'String', isNonNull: true),
+              name: ClassPropertyName(name: r'id'),
+              isResolveType: false),
+          ClassProperty(
+              type: DartTypeName(name: r'String', isNonNull: true),
+              name: ClassPropertyName(name: r'name'),
+              isResolveType: false)
+        ]),
+        FragmentClassDefinition(name: FragmentName(name: r'DepartureMixin'), properties: [
+          ClassProperty(
+              type: DartTypeName(name: r'String', isNonNull: true),
+              name: ClassPropertyName(name: r'id'),
+              isResolveType: false)
+        ]),
         ClassDefinition(
             name: ClassName(name: r'PaginationInput'),
             properties: [
@@ -235,9 +213,7 @@ final LibraryDefinition libraryDefinition =
             isInput: true)
       ],
       inputs: [
-        QueryInput(
-            type: TypeName(name: r'PaginationInput', isNonNull: true),
-            name: QueryInputName(name: r'input'))
+        QueryInput(type: TypeName(name: r'PaginationInput', isNonNull: true), name: QueryInputName(name: r'input'))
       ],
       generateHelpers: true,
       suffix: r'Query')
@@ -270,6 +246,7 @@ class VoyagesData$Query$Voyages$Voyages$Voyage$Arrival extends JsonSerializable
 
   @override
   List<Object?> get props => [id, name];
+
   @override
   Map<String, dynamic> toJson() =>
       _$VoyagesData$Query$Voyages$Voyages$Voyage$ArrivalToJson(this);
@@ -286,6 +263,7 @@ class VoyagesData$Query$Voyages$Voyages$Voyage$Departure
 
   @override
   List<Object?> get props => [id];
+
   @override
   Map<String, dynamic> toJson() =>
       _$VoyagesData$Query$Voyages$Voyages$Voyage$DepartureToJson(this);
@@ -315,6 +293,7 @@ class VoyagesData$Query$Voyages$Voyages$Voyage extends JsonSerializable
   @override
   List<Object?> get props =>
       [dateFrom, dateTo, id, voyageNumber, arrival, departure];
+
   @override
   Map<String, dynamic> toJson() =>
       _$VoyagesData$Query$Voyages$Voyages$VoyageToJson(this);
@@ -335,6 +314,7 @@ class VoyagesData$Query$Voyages$Voyages extends JsonSerializable
 
   @override
   List<Object?> get props => [numberOfReports, voyage];
+
   @override
   Map<String, dynamic> toJson() =>
       _$VoyagesData$Query$Voyages$VoyagesToJson(this);
@@ -351,6 +331,7 @@ class VoyagesData$Query$Voyages extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [voyages];
+
   @override
   Map<String, dynamic> toJson() => _$VoyagesData$Query$VoyagesToJson(this);
 }
@@ -366,6 +347,7 @@ class VoyagesData$Query extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [voyages];
+
   @override
   Map<String, dynamic> toJson() => _$VoyagesData$QueryToJson(this);
 }
@@ -386,6 +368,7 @@ class PaginationInput extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [limit, offset];
+
   @override
   Map<String, dynamic> toJson() => _$PaginationInputToJson(this);
 }
@@ -402,6 +385,7 @@ class VoyagesDataArguments extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [input];
+
   @override
   Map<String, dynamic> toJson() => _$VoyagesDataArgumentsToJson(this);
 }
@@ -574,6 +558,7 @@ class VoyagesDataQuery
 
   @override
   List<Object?> get props => [document, operationName, variables];
+
   @override
   VoyagesData$Query parse(Map<String, dynamic> json) =>
       VoyagesData$Query.fromJson(json);

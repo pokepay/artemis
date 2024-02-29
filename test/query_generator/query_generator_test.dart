@@ -19,8 +19,7 @@ void main() {
           i: Int
         }
       ''',
-            libraryDefinition:
-                LibraryDefinition(basename: r'query.graphql', queries: [
+            libraryDefinition: LibraryDefinition(basename: r'query.graphql', queries: [
               QueryDefinition(
                   name: QueryName(name: r'SomeQuery$_SomeObject'),
                   operationName: r'some_query',
@@ -64,6 +63,7 @@ class SomeQuery$SomeObject extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [s, i];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$SomeObjectToJson(this);
 }
@@ -103,16 +103,13 @@ class SomeQuery$SomeObject extends JsonSerializable with EquatableMixin {
               str: String
             }
       ''',
-            libraryDefinition:
-                LibraryDefinition(basename: r'query.graphql', queries: [
+            libraryDefinition: LibraryDefinition(basename: r'query.graphql', queries: [
               QueryDefinition(
                   name: QueryName(name: r'SomeQuery$_Result'),
                   operationName: r'some_query',
                   classes: [
                     ClassDefinition(
-                        name: ClassName(
-                            name:
-                                r'SomeQuery$_Result$_SomeObject$_AnotherObject'),
+                        name: ClassName(name: r'SomeQuery$_Result$_SomeObject$_AnotherObject'),
                         properties: [
                           ClassProperty(
                               type: DartTypeName(name: r'String'),
@@ -131,9 +128,7 @@ class SomeQuery$SomeObject extends JsonSerializable with EquatableMixin {
                               isResolveType: false),
                           ClassProperty(
                               type: ListOfTypeName(
-                                  typeName: TypeName(
-                                      name:
-                                          r'SomeQuery$_Result$_SomeObject$_AnotherObject'),
+                                  typeName: TypeName(name: r'SomeQuery$_Result$_SomeObject$_AnotherObject'),
                                   isNonNull: false),
                               name: ClassPropertyName(name: r'ob'),
                               isResolveType: false)
@@ -149,8 +144,7 @@ class SomeQuery$SomeObject extends JsonSerializable with EquatableMixin {
                               name: ClassPropertyName(name: r's'),
                               isResolveType: false),
                           ClassProperty(
-                              type: TypeName(
-                                  name: r'SomeQuery$_Result$_SomeObject'),
+                              type: TypeName(name: r'SomeQuery$_Result$_SomeObject'),
                               name: ClassPropertyName(name: r'o'),
                               isResolveType: false)
                         ],
@@ -181,6 +175,7 @@ class SomeQuery$Result$SomeObject$AnotherObject extends JsonSerializable
 
   @override
   List<Object?> get props => [str];
+
   @override
   Map<String, dynamic> toJson() =>
       _$SomeQuery$Result$SomeObject$AnotherObjectToJson(this);
@@ -199,6 +194,7 @@ class SomeQuery$Result$SomeObject extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [st, ob];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$Result$SomeObjectToJson(this);
 }
@@ -216,6 +212,7 @@ class SomeQuery$Result extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [s, o];
+
   @override
   Map<String, dynamic> toJson() => _$SomeQuery$ResultToJson(this);
 }

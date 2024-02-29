@@ -46,8 +46,7 @@ const query = r'''
   }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'SearchArticles$_Query'),
       operationName: r'SearchArticles',
@@ -77,10 +76,7 @@ final LibraryDefinition libraryDefinition =
             properties: [
               ClassProperty(
                   type: ListOfTypeName(
-                      typeName: TypeName(
-                          name: r'SearchArticles$_Query$_Article',
-                          isNonNull: true),
-                      isNonNull: false),
+                      typeName: TypeName(name: r'SearchArticles$_Query$_Article', isNonNull: true), isNonNull: false),
                   name: ClassPropertyName(name: r'articles'),
                   isResolveType: false)
             ],
@@ -93,23 +89,17 @@ final LibraryDefinition libraryDefinition =
               ClassProperty(
                   type: TypeName(name: r'SQLOperator'),
                   name: ClassPropertyName(name: r'operator'),
-                  annotations: [
-                    r'''JsonKey(name: 'operator', unknownEnumValue: SQLOperator.artemisUnknown)'''
-                  ],
+                  annotations: [r'''JsonKey(name: 'operator', unknownEnumValue: SQLOperator.artemisUnknown)'''],
                   isResolveType: false),
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'value'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'value'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
             isInput: true)
       ],
       inputs: [
-        QueryInput(
-            type: TypeName(name: r'ArticleTitleWhereConditions'),
-            name: QueryInputName(name: r'titleWhere'))
+        QueryInput(type: TypeName(name: r'ArticleTitleWhereConditions'), name: QueryInputName(name: r'titleWhere'))
       ],
       generateHelpers: false,
       suffix: r'Query')
@@ -136,6 +126,7 @@ class SearchArticles$Query$Article extends JsonSerializable
 
   @override
   List<Object?> get props => [id, title];
+
   @override
   Map<String, dynamic> toJson() => _$SearchArticles$Query$ArticleToJson(this);
 }
@@ -151,6 +142,7 @@ class SearchArticles$Query extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [articles];
+
   @override
   Map<String, dynamic> toJson() => _$SearchArticles$QueryToJson(this);
 }
@@ -172,6 +164,7 @@ class ArticleTitleWhereConditions extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [kw$operator, value];
+
   @override
   Map<String, dynamic> toJson() => _$ArticleTitleWhereConditionsToJson(this);
 }

@@ -27,8 +27,7 @@ query {
 }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'Query$_Query'),
       operationName: r'query',
@@ -37,9 +36,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'Query$_Query'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'a'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'a'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
@@ -67,6 +64,7 @@ class Query$Query extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [a];
+
   @override
   Map<String, dynamic> toJson() => _$Query$QueryToJson(this);
 }

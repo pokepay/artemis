@@ -45,8 +45,7 @@ query custom {
 }
 ''';
 
-final LibraryDefinition libraryDefinition =
-    LibraryDefinition(basename: r'query.graphql', queries: [
+final LibraryDefinition libraryDefinition = LibraryDefinition(basename: r'query.graphql', queries: [
   QueryDefinition(
       name: QueryName(name: r'Custom$_QueryRoot'),
       operationName: r'custom',
@@ -55,9 +54,7 @@ final LibraryDefinition libraryDefinition =
             name: ClassName(name: r'Custom$_QueryRoot'),
             properties: [
               ClassProperty(
-                  type: DartTypeName(name: r'String'),
-                  name: ClassPropertyName(name: r'a'),
-                  isResolveType: false)
+                  type: DartTypeName(name: r'String'), name: ClassPropertyName(name: r'a'), isResolveType: false)
             ],
             factoryPossibilities: {},
             typeNameField: ClassPropertyName(name: r'__typename'),
@@ -85,6 +82,7 @@ class Custom$QueryRoot extends JsonSerializable with EquatableMixin {
 
   @override
   List<Object?> get props => [a];
+
   @override
   Map<String, dynamic> toJson() => _$Custom$QueryRootToJson(this);
 }
