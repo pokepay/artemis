@@ -5,7 +5,7 @@ description: Build dart types from GraphQL schemas and queries (using Introspect
 homepage: https://github.com/comigor/artemis
 
 environment:
-  sdk: ">=2.18.0 <3.0.0"
+  sdk: ">=3.0.3 <4.0.0" 
 
 dependencies:
   build_config: ^1.1.1
@@ -15,7 +15,7 @@ dependencies:
   dart_style: ^2.3.5
   equatable: ^2.0.5
   glob: ^2.1.1
-  gql_code_builder: ^0.10.0
+  gql_code_builder: ^0.13.0
   gql_dedupe_link: ^2.0.3+1
   gql_exec: ^1.0.0
   gql_http_link: ^1.0.0
@@ -36,4 +36,4 @@ dev_dependencies:
   build_resolvers: ^2.2.0
   test: ^1.22.2
   logging: ^1.1.1
-  lints: ^3.0.0
+  lints: 
